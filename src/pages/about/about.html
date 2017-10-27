@@ -7,5 +7,17 @@
 </ion-header>
 
 <ion-content padding>
-
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-list>
+            <ion-item>Model : {{ model }}</ion-item>
+            <ion-item>Serial number : {{ serial }}</ion-item>  
+            <ion-item>Platform : {{ platform }}</ion-item>
+            <ion-item>IEMI : {{ deviceId }}</ion-item>
+            <ion-item>Manufacturer : {{ manufacturer }}</ion-item>            
+          </ion-list>
+        </ion-col>  
+      </ion-row>
+    </ion-grid>
 </ion-content>

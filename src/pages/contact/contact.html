@@ -1,17 +1,35 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Add Contact
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+<ion-content padding>
+  <form (ngSubmit)="addContact()">
+    <ion-list no-line>
+      <ion-item>
+        <ion-label color="dark" floating>Full Name</ion-label>
+        <ion-input type="text" [(ngModel)]="fullname" name="fullname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="dark" floating>Phone Number</ion-label>
+        <ion-input type="phoneNumber" [(ngModel)]="phoneNumber" name="phoneNumber"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label color="dark" floating>Email Address</ion-label>
+          <ion-input type="email" [(ngModel)]="email" name="email"></ion-input>
+        </ion-item><br>
+      <button ion-button block outline color="primary">Create Contact</button>
+    </ion-list>
+  </form>
+    <ion-list>
+      <ion-list-header>Device Contact List</ion-list-header>
+        <ion-item *ngFor="let item of contactsfound">
+        <h1>{{ item.displayName }}</h1>
+        <h3>{{ item.phoneNumbers }}</h3>
+        <p>{{ item.emails }}</p> 
+      </ion-item>
+    </ion-list>    
 </ion-content>

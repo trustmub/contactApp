@@ -1,0 +1,17 @@
+page-welcome {
+    
+    #welcome{
+        align-content: center;
+        text-align: center;         
+        background-color: color($colors, light); 
+        .app-name{
+            align-content: center;
+            margin-top: 20%
+        }
+        .btn-grp{
+            margin-top: 50%;
+        }
+    }
+    
+    
+}
